@@ -4,7 +4,7 @@ uint32_t LEDController::compute_blink_interval_ms(float temperature_c)
 {
     using namespace BMEConstants;
 
-    if (temperature_c <= MIN_TEMP_C)
+    if (!(temperature_c > MIN_TEMP_C))
     {
         return SLOW_BLINK_INTERVAL_MS;
     }

@@ -31,7 +31,7 @@ void loop()
     const uint32_t now_ms = millis();
     BMESPIInterface &bme = BMESPIInterfaceInstance::instance();
 
-    if (now_ms - last_read_ms >= BMEConstants::SENSOR_READ_INTERVAL_MS)
+    if (now_ms - last_read_ms >= LEDController::compute_blink_interval_ms(bme.get_temperature_c()))
     {
         last_read_ms = now_ms;
         bme.read();
