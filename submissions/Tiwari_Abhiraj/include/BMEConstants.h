@@ -5,7 +5,7 @@ namespace BMEConstants
 {
     constexpr uint32_t SERIAL_BAUD = 115200;
 
-    constexpr uint8_t I2C_ADDRESS = 0x77;
+    constexpr uint8_t I2C_ADDRESS = 0x76;
 
     constexpr int8_t SPI_CS_PIN = 10;
 
